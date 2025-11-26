@@ -1,0 +1,50 @@
+@AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase_HostAddress = https://localhost:7270
+
+### Login
+POST {{AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase_HostAddress}}/api/login
+Content-Type: application/json
+
+{
+  "username": "admin",
+  "password": "admin"
+}
+
+
+### Post User
+POST {{AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase_HostAddress}}/api/user
+Authorization: Bearer {{loginRequest.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "name": "newuser",
+  "email": "newuser@gmail.com"
+}
+
+
+### Get Users
+GET {{AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase_HostAddress}}/api/user
+Authorization: Bearer {{loginRequest.response.body.$.token}}
+Content-Type: application/json
+
+
+### Get Users by id
+GET {{AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase_HostAddress}}/api/user/2
+Authorization: Bearer {{loginRequest.response.body.$.token}}
+Content-Type: application/json
+
+
+### Put User 2
+PUT {{AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase_HostAddress}}/api/user/2
+Authorization: Bearer {{loginRequest.response.body.$.token}}
+Content-Type: application/json
+
+{
+  "name": "updated",
+  "email": "updated@gmail.com"
+}
+
+
+### Delete User by id
+DELETE {{AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase_HostAddress}}/api/user/2
+Authorization: Bearer {{loginRequest.response.body.$.token}}
+Content-Type: application/json

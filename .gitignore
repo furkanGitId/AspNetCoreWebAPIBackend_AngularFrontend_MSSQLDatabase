@@ -1,0 +1,31 @@
+# Global
+.DS_Store
+Thumbs.db
+.idea/
+.vscode/
+*.user
+*.suo
+*.swp
+
+# Dotnet build outputs
+**/bin/
+**/obj/
+**/out/
+.vs/
+
+# Node/Angular artifacts
+**/node_modules/
+**/dist/
+**/.angular/
+**/coverage/
+npm-debug.log*
+yarn-debug.log*
+yarn-error.log*
+
+# Docker
+*.pid
+*.log
+/docker-data/
+/mssql-data/
+.env
+

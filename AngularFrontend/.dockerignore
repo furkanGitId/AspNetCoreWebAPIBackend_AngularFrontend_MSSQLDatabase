@@ -1,0 +1,8 @@
+node_modules/
+dist/
+*.log
+.angular/
+.vscode/
+Dockerfile
+docker-compose.yml
+
