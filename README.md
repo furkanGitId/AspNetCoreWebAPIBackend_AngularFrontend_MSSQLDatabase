@@ -402,4 +402,40 @@ This is optional; Docker is the primary workflow.
 
 This setup gives you a fully containerized, reproducible environment suitable for local development and demonstration on GitHub.
 
+---
 
+## Git & GitHub Commands
+
+Typical workflow to publish this project to GitHub:
+
+```bash
+# 1. Initialize git (only once per project)
+git init
+
+# 2. Add all files and commit
+git add .
+git commit -m "first commit"
+
+# 3. Rename default branch to main
+git branch -M main
+
+# 4. Add your GitHub remote (replace with your own URL if different)
+git remote add origin https://github.com/furkanGitId/AspNetCoreWebAPIBackend_AngularFrontend_MSSQLDatabase.git
+
+# 5. Push to GitHub and set upstream
+git push -u origin main
+```
+
+After the first push, your day‑to‑day commands are usually:
+
+```bash
+# See what changed
+git status
+
+# Stage and commit changes
+git add .
+git commit -m "describe your change"
+
+# Push to GitHub
+git push
+```
